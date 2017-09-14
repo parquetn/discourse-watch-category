@@ -9,25 +9,19 @@ module ::WatchCategory
   def self.watch_category!
     groups_cats = {
       # "group" => ["category", "another-top-level-category", ["parent-category", "sub-category"] ],
-      "coordinating-cmte" => [ ["closed-groups", "coordinating-committee"] ],
-      "digcol-cmte" => [ ["closed-groups", "digital-collections-committee"] ],
-      "digped-cmte" => [ ["closed-groups", "digital-pedagogy-committee"] ],
-      "digschol-cmte" => [ ["closed-groups", "digital-scholarship-committee"] ],
-      "eresources-cmte" => [ ["closed-groups", "e-resources-committee"], ["libraries", "buyers-group"] ],
-      "infolit-cmte" => [ ["closed-groups", "information-literacy-committee"] ],
-      "inst-research-cmte" => [ ["closed-groups", "institutional-research-assessment-committee"] ],
-      "oclc-cmte" => [ ["closed-groups", "oclc-programs-committee"] ],
-      "profdev-cmte" => [ ["closed-groups", "professional-development-committee"] ],
-      "lib-buyers" => [ ["libraries", "buyers-group"] ],
-      "chairs" => [ ["closed-groups", "chairs"] ]
+      "Compagnons" => [ "compagnons" ],
+      "Farfadets" => [ "farfadets" ],
+      "Louveteaux" => [ "louveteaux-jeannettes" ],
+      "Pio-Cara" => [ "pionniers-caravelles" ],
+      "Scouts-Guides" => [ "scouts-guides" ],
       # "everyone" makes every user watch the listed categories
-      # "everyone" => [ "announcements" ]
+      "everyone" => [ "viegroupe" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
-      "coordinating-cmte" => [ "announcements" ],
-      "representatives" => [ "announcements" ]
+      #"coordinating-cmte" => [ "announcements" ],
+      #"representatives" => [ "announcements" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
