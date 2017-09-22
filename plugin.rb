@@ -13,15 +13,15 @@ module ::WatchCategory
       "Farfadets" => [ "farfadets" ],
       "Louveteaux" => [ "louveteaux-jeannettes" ],
       "Pio-Cara" => [ "pionniers-caravelles" ],
-      "Scouts-Guides" => [ "scouts-guides" ],
+      "Scouts-Guides" => [ "scouts-guides" ]
       # "everyone" makes every user watch the listed categories
-      "everyone" => [ "viegroupe" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching)
 
     groups_cats = {
       #"coordinating-cmte" => [ "announcements" ],
       #"representatives" => [ "announcements" ]
+      "everyone" => [ "viegroupe" ]
     }
     WatchCategory.change_notification_pref_for_group(groups_cats, :watching_first_post)
   end
